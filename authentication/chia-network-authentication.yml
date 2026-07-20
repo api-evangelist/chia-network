@@ -1,0 +1,26 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.chia.net/rpc/
+docs: https://docs.chia.net/rpc/
+summary:
+  types: [mutualTLS]
+  api_key_in: []
+  oauth2_flows: []
+schemes:
+  - name: mutualTLS
+    type: mutualTLS
+    description: >-
+      Chia RPC endpoints are secured with TLS mutual authentication using
+      self-signed certificates. Each service (full_node, wallet, farmer,
+      harvester, daemon, etc.) has its own private_ca / ssl cert + key pair
+      generated on the node; clients must present the matching --cert and --key
+      (and use --insecure against the self-signed CA). The RPC ports are intended
+      to be bound to localhost and should NOT be exposed to the internet.
+    sources: [docs.chia.net/rpc]
+    cert_files:
+      - config/ssl/<service>/private_<service>.crt
+      - config/ssl/<service>/private_<service>.key
+notes: >-
+  There is no bearer/API-key or OAuth surface: authentication is the node
+  operator's own TLS cert material. No published OpenAPI declares these schemes,
+  so this profile is searched from the RPC docs rather than derived from a spec.
