@@ -1,0 +1,12 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/Chia-Network/chia-blockchain/blob/main/CHANGELOG.md
+scheme: semver
+changelog_url: https://github.com/Chia-Network/chia-blockchain/blob/main/CHANGELOG.md
+releases_url: https://github.com/Chia-Network/chia-blockchain/releases
+format: keep-a-changelog
+note: >-
+  Chia maintains a Keep a Changelog-formatted CHANGELOG.md in the chia-blockchain
+  repository plus dated GitHub Releases. The reference implementation is the source
+  of truth for versioning; individual entries are not mirrored here (recent-window
+  policy) because the live CHANGELOG is authoritative.

@@ -1,0 +1,20 @@
+generated: '2026-07-18'
+method: searched
+host: https://chia.net
+note: >-
+  Chia exposes only self-hosted, TLS-cert-secured local RPC servers (not a public
+  hosted API), so there is no public /.well-known discovery surface. The paths below
+  either 404 or 301-redirect to the marketing site catch-all; none return a real
+  discovery document.
+documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 301
+    redirect: https://www.chia.net/.well-known/openid-configuration
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+  - path: /.well-known/api-catalog
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 301

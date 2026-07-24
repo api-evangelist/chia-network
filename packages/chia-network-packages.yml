@@ -1,0 +1,36 @@
+generated: '2026-07-18'
+method: searched
+source: https://pypi.org/project/chia-blockchain/ ; https://pypi.org/project/chia-rs/ ; https://github.com/Chia-Network/chia_rs ; https://www.nuget.org/packages/chia-dotnet
+packages:
+  - language: python
+    registry: pypi
+    name: chia-blockchain
+    url: https://pypi.org/project/chia-blockchain/
+    install: pip install chia-blockchain
+    official: true
+    description: Chia blockchain full node, farmer, timelord, and wallet reference implementation (includes the chia CLI and the RPC servers).
+    repo: https://github.com/Chia-Network/chia-blockchain
+    license: Apache-2.0
+  - language: python
+    registry: pypi
+    name: chia_rs
+    url: https://pypi.org/project/chia_rs/
+    install: pip install chia_rs
+    official: true
+    description: Python wheel of Chia's Rust consensus code (BLS, CLVM, blockchain primitives).
+    repo: https://github.com/Chia-Network/chia_rs
+  - language: rust
+    registry: crates.io
+    name: chia
+    url: https://crates.io/crates/chia
+    install: cargo add chia
+    official: true
+    description: Chia's collection of Rust crates for working with the Chia blockchain.
+    repo: https://github.com/Chia-Network/chia_rs
+  - language: dotnet
+    registry: nuget
+    name: chia-dotnet
+    url: https://www.nuget.org/packages/chia-dotnet
+    install: dotnet add package chia-dotnet
+    official: false
+    description: Community .NET client library for the Chia RPC interfaces (author dkackman); not an official Chia Network client.

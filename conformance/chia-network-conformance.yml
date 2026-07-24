@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: derived
+source: docs.chia.net/rpc ; authentication/chia-network-authentication.yml
+standards:
+  - id: oauth2
+    conforms: false
+    evidence: RPC auth is TLS mutual authentication, not OAuth2.
+  - id: oidc
+    conforms: false
+  - id: mutual-tls
+    conforms: true
+    evidence: RPC services require client certificate authentication (self-signed CA per node).
+  - id: json-rpc
+    conforms: false
+    evidence: Uses HTTP POST with JSON named-parameter bodies per endpoint, not the JSON-RPC 2.0 envelope.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: 'Errors returned as a JSON object with success=false and an error string, not application/problem+json.'
+  - id: websocket
+    conforms: true
+    evidence: Daemon (port 55400) routes RPCs over a WebSocket connection.
+  - id: bls-signatures
+    conforms: true
+    evidence: Chia uses BLS12-381 aggregate signatures (chia_rs / chiabls).

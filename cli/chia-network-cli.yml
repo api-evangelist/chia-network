@@ -1,0 +1,50 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.chia.net/cli/
+cli:
+  binary: chia
+  official: true
+  description: >-
+    First-party command-line interface bundled with the chia-blockchain reference
+    implementation. Drives the full node, wallet, farming, plotting, keys, and the
+    RPC client. The GUI ships the same binary (chia) inside the Chia.app / Chia
+    desktop bundle.
+  install:
+    - method: pip
+      command: pip install chia-blockchain
+    - method: desktop-bundle
+      note: >-
+        Installed with the Chia GUI; on macOS at
+        /Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon/chia,
+        on Windows at ...\Chia\resources\app.asar.unpacked\daemon\chia.exe
+  command_groups:
+    - name: wallet
+      summary: Manage wallets, balances, and transactions
+    - name: keys
+      summary: Generate, add, show, and delete key material
+    - name: plots
+      summary: Create, check, and manage plots
+    - name: plotters
+      summary: Advanced / alternative plotter configuration
+    - name: plotnft
+      summary: Manage plot NFTs (pooling)
+    - name: farm
+      summary: Manage and summarize farming
+    - name: show
+      summary: Display node / blockchain state
+    - name: start
+      summary: Start service groups (node, farmer, wallet, ...)
+    - name: stop
+      summary: Stop running services
+    - name: configure
+      summary: Modify the node configuration
+    - name: data
+      summary: DataLayer management
+    - name: db
+      summary: Database maintenance (upgrade, backup)
+    - name: rpc
+      summary: Invoke RPC endpoints from the command line
+    - name: dev
+      summary: Developer / debugging tools
+    - name: version
+      summary: Print the installed version

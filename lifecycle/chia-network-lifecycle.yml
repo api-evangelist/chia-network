@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: searched
+source: https://status.chia.net/ ; https://github.com/Chia-Network/chia-blockchain/releases
+versioning:
+  scheme: semver
+  docs: https://github.com/Chia-Network/chia-blockchain/blob/main/CHANGELOG.md
+  note: Versioned per chia-blockchain release; the RPC surface tracks the node version, not a URI/date API version.
+status_page: https://status.chia.net/
+status_components:
+  - Blockchain Health
+  - Cloud Wallet Platform
+  - Chia Website
+  - Introducers
+  - Nodes
+  - DNS Introducers
+  - Downloads
+  - Faucet
+  - Chia PyPi
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No formal RFC 8594 Sunset/Deprecation-header policy is published for the RPC surface.

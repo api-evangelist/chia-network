@@ -1,0 +1,46 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.chia.net/rpc/
+transport:
+  protocols: [https-json, websocket]
+  style: rpc
+  http_method: POST
+  content_type: application/json
+  description: >-
+    Every RPC is an HTTPS POST to https://localhost:<port>/<endpoint_name> with a
+    JSON body of named parameters. The daemon (port 55400) additionally routes the
+    same RPCs over a WebSocket connection.
+  service_ports:
+    full_node: 8555
+    wallet: 9256
+    farmer: 8559
+    harvester: 8560
+    crawler: 8561
+    datalayer: 8562
+    timelord: 8557
+    solver: 8667
+    daemon: 55400
+authentication:
+  style: mutualTLS
+  ref: authentication/chia-network-authentication.yml
+response_envelope:
+  success_field: success
+  description: >-
+    RPC responses are JSON objects that carry a boolean "success" field; on failure
+    an "error" string describes the problem. Result data is inlined alongside
+    "success" rather than wrapped in a data envelope.
+idempotency:
+  supported: false
+  note: No documented idempotency-key mechanism.
+pagination:
+  supported: partial
+  note: >-
+    A few list endpoints (e.g. get_transactions) accept start/end offset
+    parameters; there is no cursor-based pagination convention.
+number_handling:
+  note: >-
+    Some responses (e.g. get_blockchain_state) contain integers exceeding
+    JavaScript's safe integer limit (2^53 - 1); clients must handle big integers.
+versioning:
+  scheme: semver
+  note: Versioned by chia-blockchain release (semver); see changelog/chia-network-changelog.yml

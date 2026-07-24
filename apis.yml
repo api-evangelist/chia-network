@@ -1,8 +1,16 @@
 aid: chia-network
 name: Chia Network
-description: 'Chia Network is a company surfaced as a portfolio company of dcm-ventures and added to the
-  API Evangelist network as a stub for enrichment. Sector: frontier-tech. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Chia Network is the company behind an open-source, decentralized blockchain that
+  uses a Proof of Space and Time consensus model, letting participants "farm" with
+  unused disk space instead of energy-intensive mining. Its reference implementation,
+  chia-blockchain, runs a full node, farmer, harvester, timelord, and wallet, and
+  exposes a set of local, TLS-certificate-secured JSON RPC services (full node, wallet,
+  farmer, harvester, DataLayer, crawler, timelord, solver, and a WebSocket daemon)
+  alongside the `chia` command-line interface and the Chialisp smart-contract language.
+  Chia also builds tooling for tokenized carbon and climate applications (Climate
+  Action Data Trust). The developer surface centers on the RPC APIs, official Python
+  and Rust packages, and an extensive GitHub organization rather than a public hosted API.
 url: https://raw.githubusercontent.com/api-evangelist/chia-network/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,13 +18,45 @@ x-backed-by:
 - dcm-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Requires approval
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://www.chia.net/wp-content/uploads/2022/09/chia-logo.svg
 tags:
 - Company
 - Frontier Tech
-apis: []
+- Blockchain
+- Cryptocurrency
+- Decentralized
+- Web3
+- Developer Tools
+- Open Source
+apis:
+- name: Chia RPC API
+  description: >-
+    Local JSON-over-HTTPS RPC surface exposed by the chia-blockchain reference node.
+    Each service (full_node, wallet, farmer, harvester, datalayer, crawler, timelord,
+    solver) listens on its own port and is secured with TLS client certificates; the
+    daemon additionally routes RPCs over WebSocket. Intended to run on localhost.
+  humanURL: https://docs.chia.net/rpc/
+  baseURL: https://localhost:8555
+  properties:
+  - type: APIReference
+    url: https://docs.chia.net/rpc/
+  - type: Authentication
+    url: authentication/chia-network-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +65,50 @@ maintainers:
 common:
 - type: Website
   url: https://chia.net/
+- type: DeveloperPortal
+  url: https://docs.chia.net/
+- type: Documentation
+  url: https://docs.chia.net/
+- type: APIReference
+  url: https://docs.chia.net/rpc/
+- type: GettingStarted
+  url: https://docs.chia.net/chia-blockchain/introduction/
+- type: Blog
+  url: https://www.chia.net/blog/
+- type: GitHubOrganization
+  url: https://github.com/Chia-Network
+- type: SourceCode
+  url: https://github.com/Chia-Network/chia-blockchain
+- type: TermsOfService
+  url: https://www.chia.net/terms/
+- type: PrivacyPolicy
+  url: https://www.chia.net/privacy/
+- type: StatusPage
+  url: https://status.chia.net/
+- type: ChangeLog
+  url: https://github.com/Chia-Network/chia-blockchain/blob/main/CHANGELOG.md
+- type: Packages
+  url: packages/chia-network-packages.yml
+- type: SDKs
+  url: packages/chia-network-packages.yml
+- type: CLI
+  url: cli/chia-network-cli.yml
+- type: Authentication
+  url: authentication/chia-network-authentication.yml
+- type: Conventions
+  url: conventions/chia-network-conventions.yml
+- type: Lifecycle
+  url: lifecycle/chia-network-lifecycle.yml
+- type: Conformance
+  url: conformance/chia-network-conformance.yml
+- type: WellKnown
+  url: well-known/chia-network-well-known.yml
+- type: DomainSecurity
+  url: security/chia-network-domain-security.yml
+- type: LLMsTxt
+  url: llms/chia-network-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
