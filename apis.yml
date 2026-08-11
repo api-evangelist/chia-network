@@ -63,6 +63,19 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: IssueTracker
+  url: https://github.com/Chia-Network/chia-blockchain/issues
+- type: Releases
+  url: https://github.com/Chia-Network/chia-blockchain/releases
+- type: SecurityPolicy
+  url: https://github.com/Chia-Network/chia-blockchain/blob/main/SECURITY.md
+- type: CodeOfConduct
+  url: https://github.com/Chia-Network/chia-blockchain/blob/main/CODE_OF_CONDUCT.md
+- type: ContributionGuide
+  url: https://github.com/Chia-Network/chia-blockchain/blob/main/CONTRIBUTING.md
+- type: License
+  name: Apache-2.0
+  url: https://github.com/Chia-Network/chia-blockchain/blob/main/LICENSE
 - type: Website
   url: https://chia.net/
 - type: DeveloperPortal
