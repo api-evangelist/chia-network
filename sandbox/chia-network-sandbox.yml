@@ -1,0 +1,31 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.chia.net/guides/simulator-user-guide/
+docs:
+  - https://docs.chia.net/guides/simulator-user-guide/
+  - https://docs.chia.net/reference-client/rpc-reference/simulator-rpc/
+summary: >-
+  Chia ships a first-party local blockchain simulator for testing without real
+  XCH. It runs a private chain where the developer controls block production,
+  giving a full test environment plus a Simulator RPC to drive it.
+sandbox:
+  name: Chia Simulator
+  type: local-simulated-chain
+  install: chia dev sim create
+  networks:
+    - name: mainnet (production)
+      note: real XCH, live network
+    - name: testnet (public test network)
+      note: faucet-funded TXCH test coins on the public testnet
+    - name: simulator
+      note: fully local private chain, developer-controlled block farming
+  capabilities:
+    - Auto-farm or manually farm blocks on demand (`chia dev sim farm`)
+    - Pre-funded developer wallet on genesis for spending tests
+    - Time / block-height advancement by farming empty blocks
+    - Simulator RPC to create coins, farm blocks and inspect state
+  simulator_rpc: https://docs.chia.net/reference-client/rpc-reference/simulator-rpc/
+notes: >-
+  No fixed "magic" test card/token values are published (Chia is not a card
+  acquirer); the simulator instead gives a controllable private chain. Testnet
+  TXCH is obtained from the public testnet faucet. Nothing here is fabricated.

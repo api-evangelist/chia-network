@@ -85,6 +85,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Sandbox
+  url: sandbox/chia-network-sandbox.yml
 - type: IssueTracker
   url: https://github.com/Chia-Network/chia-blockchain/issues
 - type: Releases
