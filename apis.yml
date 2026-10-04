@@ -58,7 +58,7 @@ tags:
 - Decentralized
 - Web3
 - Developer Tools
-- Open-Source
+- Open Source
 tags_raw:
 - Company
 - Frontier Tech
@@ -68,6 +68,7 @@ tags_raw:
 - Web3
 - Developer Tools
 - Open Source
+- Open-Source
 apis:
 - name: Chia RPC API
   description: >-
